@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body {
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    min-width: 300px;
+    max-width: 100%;
+    min-height: 400px;
+    background: #333;
+    border-radius: 0.5rem;
+    padding: 40px 30px 30px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5), inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.calculator {
+    display: grid;
+    position: relative;
+}
+
+.calculator .value {
+    position: relative;
+    grid-column: span 4;
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.calculator span {
+    color: #2f2f2f;
+    cursor: pointer;
+    display: grid;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: #fff;
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+    user-select: none;
+    font-size: 20px;
+    font-weight: 400;
+    place-items: center;
+    border-radius: 50%;
+}
+
+
+/*.calculator span::before {
+    content: ' ';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    right: 12px;
+    bottom: 14px;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg #2d2d2d, #4d4d4d);
+}
+
+.calculator span:active {
+    filter: brightness(1.5);
+}*/
+
+.calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator span:hover {
+    background: #2f2f2f;
+    color: #fff;
+}
+
+.calculator .active {
+    grid-column: span 2;
+    width: 180px;
+    color: rgb(243, 158, 31);
+    border-radius: 0.5rem;
+}
+
+.calculator .active:hover {
+    background: rgb(243, 158, 31);
+    color: #fff;
+}
+
+.calculator .equal {
+    background: #1479c9;
+    color: #fff;
+}
+
+.calculator .sign {
+    color: rgb(243, 158, 31);
+}
+
+.calculator .sign:hover {
+    color: #fff;
+    background: rgb(243, 158, 31);
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        min-width: 435px;
+    }
+}
